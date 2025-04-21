@@ -1,40 +1,60 @@
-Below are the steps to get your plugin running. You can also find instructions at:
+# AI Graph Reviewer
 
-  https://www.figma.com/plugin-docs/plugin-quickstart-guide/
+## 🎯 プロジェクト概要
+Figma上でのデザインレビューを革新するAIアシスタントです。デザイナーの修正履歴を学習データとして活用し、チーム独自のデザインルールを理解するAIを育てることができます。
 
-This plugin template uses Typescript and NPM, two standard tools in creating JavaScript applications.
+## ✨ 特徴
 
-First, download Node.js which comes with NPM. This will allow you to install TypeScript and other
-libraries. You can find the download link here:
+### 🧠 知見の継承
+- デザイナーの判断理由やノウハウをデータとして蓄積
+- チーム独自のデザインルールをAIが学習
 
-  https://nodejs.org/en/download/
+### 🔁 反復可能性
+- 過去の修正パターンをAIが学習
+- 類似したデザイン課題への自動対応
 
-Next, install TypeScript using the command:
+### 🛠 自社チューンAI
+- 会社独自の表現ルールに基づいたフィードバック
+- チームのデザイン文化を反映したレビュー
 
-  npm install -g typescript
+### 🧑‍🎓 教育支援
+- 新人デザイナー向けの学習ツール
+- 非デザイナーでもプロレベルのグラフ作成をサポート
 
-Finally, in the directory of your plugin, get the latest type definitions for the plugin API by running:
+## 🚀 今後の展開
+- デザイナーとエンジニアの共通言語化
+- LLMによる修正意図の自動要約
+- Slack/Notionとの連携による社内ナレッジ共有
 
-  npm install --save-dev @figma/plugin-typings
+## 💡 なぜこのプロジェクトなのか？
+既存のデザインレビューツールは、色のコントラストや余白の一貫性チェックなど、定型的なレビューに特化しています。しかし、**「デザイナーの修正過程」**を記録・学習するツールはまだ少ないのが現状です。
 
-If you are familiar with JavaScript, TypeScript will look very familiar. In fact, valid JavaScript code
-is already valid Typescript code.
+このプロジェクトは、チーム独自のデザイン文化をAIに学習させ、あなたのチームだけの特別なAIアシスタントを育てることができる点が最大の特徴です。
 
-TypeScript adds type annotations to variables. This allows code editors such as Visual Studio Code
-to provide information about the Figma API while you are writing code, as well as help catch bugs
-you previously didn't notice.
+## 🛠 ビルド方法
 
-For more information, visit https://www.typescriptlang.org/
+### 必要な環境
+- Node.js
+- npm
 
-Using TypeScript requires a compiler to convert TypeScript (code.ts) into JavaScript (code.js)
-for the browser to run.
+### インストール
+```bash
+npm install
+```
 
-We recommend writing TypeScript code using Visual Studio code:
+### 開発コマンド
+- ビルド: `npm run build`
+- 開発モード（ウォッチ）: `npm run watch`
+- リンター実行: `npm run lint`
+- リンター自動修正: `npm run lint:fix`
 
-1. Download Visual Studio Code if you haven't already: https://code.visualstudio.com/.
-2. Open this directory in Visual Studio Code.
-3. Compile TypeScript to JavaScript: Run the "Terminal > Run Build Task..." menu item,
-    then select "npm: watch". You will have to do this again every time
-    you reopen Visual Studio Code.
+### 技術スタック
+- TypeScript
+- Figma Plugin API
+- ESLint（@figma/eslint-plugin-figma-plugins）
 
-That's it! Visual Studio Code will regenerate the JavaScript file every time you save.
+### 開発環境のセットアップ
+1. リポジトリをクローン
+2. `npm install` で依存関係をインストール
+3. `npm run build` でビルド
+4. Figmaデスクトップアプリでプラグインを開発モードで実行
